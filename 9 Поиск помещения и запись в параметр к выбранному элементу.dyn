@@ -1,0 +1,117 @@
+<Workspace Version="1.3.2.2480" X="559.457562162798" Y="569.653332448661" zoom="0.134875777290651" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="1732ef42-a8ed-44be-a34b-e0895d509b6f" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Element.SetParameterByName" x="-1350.85867927495" y="-1108.67855744933" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.Element.SetParameterByName@string,var">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.Input.StringInput guid="c3b69296-baaf-42b9-aa3c-889506212a52" type="CoreNodeModels.Input.StringInput" nickname="В какой параметр записывать в стене? " x="-2059.43444768736" y="-989.473157866175" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>++ESKKSSiteOfInstallation</System.String>
+      <System.String value="++ESKKSSiteOfInstallation" />
+    </CoreNodeModels.Input.StringInput>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="16b674c7-963a-4fa9-8c08-89ce4480da61" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Flatten" x="-3080.21460918615" y="-1078.58678188379" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="BuiltIn" function="Flatten@var[]..[]">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="2c6083f2-d025-4c04-a02e-3d0b5b8f80a0" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="Tool.GetRevitSelection" x="-3344.23025225164" y="-1070.14747139451" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <ID value="809a8e44-f6b5-42be-a349-4116e81be2cf" />
+      <Name value="Tool.GetRevitSelection" />
+      <Description value="Get the selection from the Revit UI, use boolean action to refresh when selection must be updated" />
+      <Inputs>
+        <Input value="reset" />
+      </Inputs>
+      <Outputs>
+        <Output value="Element" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <CoreNodeModels.Input.BoolSelector guid="24f3943a-85a0-4fd8-a65d-72c004e557d5" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="-3519.12579150937" y="-1144.98487448944" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <System.Boolean>True</System.Boolean>
+    </CoreNodeModels.Input.BoolSelector>
+    <CoreNodeModels.Input.StringInput guid="daeaddea-ea4b-49dc-a497-c9f4e7662503" type="CoreNodeModels.Input.StringInput" nickname="C какого параметра помещения брать значения?" x="-2862.74201200237" y="-951.270078764161" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>ESKKSMultiLevelID</System.String>
+      <System.String value="ESKKSMultiLevelID" />
+    </CoreNodeModels.Input.StringInput>
+    <CoreNodeModels.Input.StringInput guid="1eea68a9-2d4e-426d-b798-f3ef125061f4" type="CoreNodeModels.Input.StringInput" nickname="C какого параметра помещения брать значения?" x="-2861.09213969513" y="-742.657188963551" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>ESKKSSingleLevelID</System.String>
+      <System.String value="ESKKSSingleLevelID" />
+    </CoreNodeModels.Input.StringInput>
+    <CoreNodeModels.Input.StringInput guid="e161ec0b-46de-427f-86df-a892c8d233a9" type="CoreNodeModels.Input.StringInput" nickname="C какого параметра помещения брать значения?" x="-2858.57936501558" y="-528.470587837691" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>+ESKKSPointOfInstallation</System.String>
+      <System.String value="+ESKKSPointOfInstallation" />
+    </CoreNodeModels.Input.StringInput>
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="cf5e1fa9-7613-4294-9765-d10ce8ba47bc" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="bv Get Parameter Value as String" x="-2458.62120958842" y="-987.704816535441" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <ID value="1cbca661-efcf-459b-b2f6-6c7b48de8da0" />
+      <Name value="bv Get Parameter Value as String" />
+      <Description value="forked from Rhythm" />
+      <Inputs>
+        <Input value="Parameter Name" />
+        <Input value="Element(s)" />
+      </Inputs>
+      <Outputs>
+        <Output value="Value" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="1fb3db6a-a5ba-432f-baf2-23136a863570" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="bv Get Parameter Value as String" x="-2461.21795543016" y="-824.109828506028" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <ID value="1cbca661-efcf-459b-b2f6-6c7b48de8da0" />
+      <Name value="bv Get Parameter Value as String" />
+      <Description value="forked from Rhythm" />
+      <Inputs>
+        <Input value="Parameter Name" />
+        <Input value="Element(s)" />
+      </Inputs>
+      <Outputs>
+        <Output value="Value" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="79d28c2b-d747-47fc-b0f5-ffdecb9a2484" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="bv Get Parameter Value as String" x="-2453.42771790494" y="-600.789686116666" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <ID value="1cbca661-efcf-459b-b2f6-6c7b48de8da0" />
+      <Name value="bv Get Parameter Value as String" />
+      <Description value="forked from Rhythm" />
+      <Inputs>
+        <Input value="Parameter Name" />
+        <Input value="Element(s)" />
+      </Inputs>
+      <Outputs>
+        <Output value="Value" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="114572b4-403f-4261-aa65-7aab0ad90c3a" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-2809" y="-1416" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="true" CodeText="w.GetParameterValueByName(&quot;ESKKSTopNode&quot;);&#xA;z.GetParameterValueByName(&quot;ESKKSMultiLevelID&quot;);&#xA;g.GetParameterValueByName(&quot;ESKKSSingleLevelID&quot;);&#xA;d.GetParameterValueByName(&quot;+ESKKSPointOfInstallation&quot;);" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+      <PortInfo index="3" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="c3b69296-baaf-42b9-aa3c-889506212a52" start_index="0" end="1732ef42-a8ed-44be-a34b-e0895d509b6f" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="16b674c7-963a-4fa9-8c08-89ce4480da61" start_index="0" end="cf5e1fa9-7613-4294-9765-d10ce8ba47bc" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="16b674c7-963a-4fa9-8c08-89ce4480da61" start_index="0" end="1fb3db6a-a5ba-432f-baf2-23136a863570" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="16b674c7-963a-4fa9-8c08-89ce4480da61" start_index="0" end="79d28c2b-d747-47fc-b0f5-ffdecb9a2484" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="16b674c7-963a-4fa9-8c08-89ce4480da61" start_index="0" end="114572b4-403f-4261-aa65-7aab0ad90c3a" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="16b674c7-963a-4fa9-8c08-89ce4480da61" start_index="0" end="114572b4-403f-4261-aa65-7aab0ad90c3a" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="16b674c7-963a-4fa9-8c08-89ce4480da61" start_index="0" end="114572b4-403f-4261-aa65-7aab0ad90c3a" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="16b674c7-963a-4fa9-8c08-89ce4480da61" start_index="0" end="114572b4-403f-4261-aa65-7aab0ad90c3a" end_index="3" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="2c6083f2-d025-4c04-a02e-3d0b5b8f80a0" start_index="0" end="16b674c7-963a-4fa9-8c08-89ce4480da61" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="24f3943a-85a0-4fd8-a65d-72c004e557d5" start_index="0" end="2c6083f2-d025-4c04-a02e-3d0b5b8f80a0" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="daeaddea-ea4b-49dc-a497-c9f4e7662503" start_index="0" end="cf5e1fa9-7613-4294-9765-d10ce8ba47bc" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="1eea68a9-2d4e-426d-b798-f3ef125061f4" start_index="0" end="1fb3db6a-a5ba-432f-baf2-23136a863570" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="e161ec0b-46de-427f-86df-a892c8d233a9" start_index="0" end="79d28c2b-d747-47fc-b0f5-ffdecb9a2484" end_index="1" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="51bd4a96-2e9b-4b30-9219-40d3519c291a" annotationText="Запись данных" left="-1360.85867927495" top="-1138.67855744933" width="290" height="175" fontSize="14" InitialTop="-1108.67855744933" InitialHeight="712.199777544026" TextblockHeight="20" backgrouund="#FFC1D676">
+      <Models ModelGuid="1732ef42-a8ed-44be-a34b-e0895d509b6f" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Фоновый просмотр" eyeX="12664.7763671875" eyeY="18020.123046875" eyeZ="13196.4072265625" lookX="-1538.54431152344" lookY="-8822.841796875" lookZ="-5433.25244140625" upX="-0.192657455801964" upY="0.70710676908493" upZ="-0.680355131626129" />
+  </Cameras>
+</Workspace>
